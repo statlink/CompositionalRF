@@ -1,0 +1,15 @@
+#useDynLib(Compositional, .registration = TRUE)
+
+importFrom("Compositional", alr, makefolds)
+importFrom("Rfast", colmeans)
+importFrom("stats", predict, ppr)
+importFrom("MultivariateRandomForest", build_forest_predict)
+
+import("doParallel")
+import("parallel")
+import("foreach")
+
+exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")
+export(.onAttach)
+
