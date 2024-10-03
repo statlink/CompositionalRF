@@ -16,7 +16,7 @@ alfa.comp.rf <- function(xnew = x, y, x, a = seq(-1, 1, by = 0.1), ntrees, nfeat
       est[[ i ]][[ j ]] <- Compositional::alfainv(yhat, a[i])
     }
   }
-  est
 
+  est
 }
 
