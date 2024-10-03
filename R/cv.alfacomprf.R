@@ -40,6 +40,9 @@ cv.alfacomprf <- function(y, x, a = seq(-1, 1, by = 0.1), ntrees = c(50, 100, 20
 
   } else {
     kla <- jsa <- list()
+    names <- paste("alpha", a)
+    kla <- jsa <- sapply(names, function(x) NULL)
+
     if ( is.null(folds) )
       folds <- Compositional::makefolds(1:n, nfolds = nfolds, stratified = FALSE, seed = seed)
     nfolds <- length(folds)
@@ -66,7 +69,8 @@ cv.alfacomprf <- function(y, x, a = seq(-1, 1, by = 0.1), ntrees = c(50, 100, 20
         kla[[ i ]] <- kl
         jsa[[ i ]] <- js
       }
-    }
+    }  ##  end  for ( k in 1:nfolds ) {
+
     for (i in 1:la) {
       kla[[ i ]] <- cbind(config, Rfast::colmeans(kla[[ i ]]) )
       js[[ i ]] <- cbind(config, Rfast::colmeans(jsa[[ i ]]) )
