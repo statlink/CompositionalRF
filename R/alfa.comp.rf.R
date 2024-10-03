@@ -1,6 +1,7 @@
 alfa.comp.rf <- function(xnew = x, y, x, a = seq(-1, 1, by = 0.1), ntrees, nfeatures, minleaf) {
 
   config <- as.matrix( expand.grid(ntrees = ntrees, nfeatures = nfeatures, minleaf = minleaf) )
+  p <- dim(config)[1]
   est <- list()
   if ( min(y) == 0 )  a <- a[a > 0]
   la <- length(a)

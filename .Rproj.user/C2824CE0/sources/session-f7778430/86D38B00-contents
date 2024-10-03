@@ -1,4 +1,4 @@
-cv.comprf <- function(y, x, ntrees = c(50, 100, 500, 1000), nfeatures, minleaf,
+cv.comprf <- function(y, x, ntrees = c(50, 100, 200), nfeatures, minleaf,
                       folds = NULL, nfolds = 10, seed = NULL, ncores = 1) {
 
   config <- as.matrix( expand.grid(ntrees = ntrees, nfeatures = nfeatures, minleaf = minleaf) )
