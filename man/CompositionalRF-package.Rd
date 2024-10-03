@@ -14,8 +14,8 @@ The data are first transformed using the additive log-ratio transformation and t
 \tabular{ll}{
 Package: \tab CompositionalRF\cr
 Type: \tab Package\cr
-Version: \tab 1.0 \cr
-Date: \tab 2024-10-01\cr
+Version: \tab 1.1 \cr
+Date: \tab 2024-10-03\cr
 License: \tab GPL-2\cr
 }
 }
