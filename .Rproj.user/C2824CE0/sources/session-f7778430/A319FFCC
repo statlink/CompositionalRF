@@ -1,27 +1,27 @@
 {
-    "id": "09431EEE",
-    "path": "~/GitHub/CompositionalRF/R/alfa.comp.rf.R",
-    "project_path": "R/alfa.comp.rf.R",
+    "id": "A319FFCC",
+    "path": "~/GitHub/CompositionalRF/R/cv.alfacomprf.R",
+    "project_path": "R/cv.alfacomprf.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1727940202969.0,
+    "created": 1727941240803.0,
     "source_on_save": false,
     "relative_order": 4,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "4,0",
-        "scrollLine": "0"
+        "cursorPosition": "65,7",
+        "scrollLine": "48"
     },
     "folds": "",
-    "lastKnownWriteTime": 1727941163,
+    "lastKnownWriteTime": 1727942546,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1727941163713,
+    "last_content_update": 1727942546038,
     "read_only": false,
     "read_only_alternatives": []
 }
