@@ -51,7 +51,7 @@ cv.alfacomprf <- function(y, x, a = seq(-1, 1, by = 0.1), ntrees = c(50, 100, 50
       ytest <- y[ folds[[ k ]],  ]
       xtrain <- x[-folds[[ k ]], ]
       xtest <- x[folds[[ k ]], ]
-      est <- alfa.comp.rf(xtest, ytrain, xtrain, a = a,
+      est <- CompositionalRF::alfa.comp.rf(xtest, ytrain, xtrain, a = a,
                                 ntrees = config, nfeatures = config, minleaf = config)
       for (i in 1:la) {
         for (j in 1:p) {
