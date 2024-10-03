@@ -1,7 +1,6 @@
 cv.alfacomprf <- function(y, x, a = seq(-1, 1, by = 0.1), ntrees = c(50, 100, 500, 1000), nfeatures,
                           minleaf, folds = NULL, nfolds = 10, seed = NULL, ncores = 1) {
 
-  config <- as.matrix( expand.grid(ntrees = ntrees, nfeatures = nfeatures, minleaf = minleaf) )
   if ( min(y) == 0 )  a <- a[a > 0]
   n <- dim(y)[1]
 
@@ -52,7 +51,7 @@ cv.alfacomprf <- function(y, x, a = seq(-1, 1, by = 0.1), ntrees = c(50, 100, 50
       xtrain <- x[-folds[[ k ]], ]
       xtest <- x[folds[[ k ]], ]
       est <- CompositionalRF::alfa.comp.rf(xtest, ytrain, xtrain, a = a,
-                                ntrees = config, nfeatures = config, minleaf = config)
+                                ntrees = ntrees, nfeatures = nfeatures, minleaf = minleaf)
       for (i in 1:la) {
         for (j in 1:p) {
           ela <- abs( ytest * log( ytest / est[[ i ]][[ j ]] ) )
