@@ -47,12 +47,12 @@ cv.alfacomprf <- function(y, x, a = seq(-1, 1, by = 0.1), ntrees = c(50, 100, 50
     kl <- js <- matrix(nrow = nfolds, ncol = p)
 
     for ( k in 1:nfolds ) {
-      ytrain <- ly[ -folds[[ k ]], ]
+      ytrain <- y[ -folds[[ k ]], ]
       ytest <- y[ folds[[ k ]],  ]
       xtrain <- x[-folds[[ k ]], ]
       xtest <- x[folds[[ k ]], ]
-      est <- CompositionalRF::alfa.comp.rf(xtest, ytrain, xtrain, a = a,
-                                ntrees = config[j, 1], nfeatures = config[j, 2], minleaf = config[j, 3])
+      est <- alfa.comp.rf(xtest, ytrain, xtrain, a = a,
+                                ntrees = config, nfeatures = config, minleaf = config)
       for (i in 1:la) {
         for (j in 1:p) {
           ela <- abs( ytest * log( ytest / est[[ i ]][[ j ]] ) )
