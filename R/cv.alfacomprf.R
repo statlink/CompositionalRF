@@ -71,15 +71,16 @@ cv.alfacomprf <- function(y, x, a = seq(-1, 1, by = 0.1), ntrees = c(50, 100, 20
       }
     }  ##  end  for ( k in 1:nfolds ) {
 
+    kla2 <- matrix(nrow = la, ncol = p)
+    rownames(kla2) <- paste("alpha=", a, sep = "")
+    jsa2 <- kla2
     for (i in 1:la) {
-      kla[[ i ]] <- cbind(config, Rfast::colmeans(kla[[ i ]]) )
-      js[[ i ]] <- cbind(config, Rfast::colmeans(jsa[[ i ]]) )
+      kla2[i, ] <- Rfast::colmeans(kla[[ i ]])
+      jsa2[i, ] <- Rfast::colmeans(jsa[[ i ]])
     }
   }
 
-  colnames(kl) <- c( colnames(config), "KL")
-  colnames(js) <- c( colnames(config), "JS")
-  list(kl = kl, js = js)
+  list(config = config, kl = kla2, js = jsa2)
 }
 
 
