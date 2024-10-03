@@ -25,7 +25,8 @@ cv.alfacomprf <- function(y, x, a = seq(-1, 1, by = 0.1), ntrees = c(50, 100, 50
          ela <- abs( ytest * log( ytest / est ) )
          ela[ is.infinite(ela) ] <- NA
          kl[k, j] <- 2 * mean(ela , na.rm = TRUE)
-         ela2 <- ytest * log( 2 * ytest / (ytest + est) ) + est * log( 2 * est / (ytest + est) )
+         M <- 0.5 * (ytest + est[[ i ]][[ j ]])
+         ela2 <- ytest * log( ytest / M ) + est[[ i ]][[ j ]] * log( est[[ i ]][[ j ]] / M )
          ela2[ is.infinite(ela2) ] <- NA
          js[k, j] <- mean(ela2, na.rm = TRUE)
        }
