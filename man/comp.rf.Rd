@@ -9,7 +9,7 @@ Compositional Random Forests.
 }
 
 \usage{
-comp.rf(xnew = x, y, x, type = "alr", ntrees, nfeatures, minleaf)
+comp.rf(xnew = x, y, x, type = "alr", ntrees, nfeatures, minleaf, ncores = 0)
 }
 
 \arguments{
@@ -37,6 +37,12 @@ which must be less than the number of input precictors.
 Minimum number of observations in the leaf node. If a node has less than or equal to minleaf observations,
 there will be no splitting in that node and this node will be considered as a leaf node.
 The number evidently must be less than or equal to the sample size.
+}
+\item{ncores}{
+The number of cores to use. If more than 1, parallel computing will take place.
+It is advisable to use it if you have many observations and or many variables,
+otherwise it will slow down the process. The default is 0, meaning that code is
+executed serially.
 }
 }
 

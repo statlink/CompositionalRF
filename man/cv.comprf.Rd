@@ -9,7 +9,7 @@ Cross-Validation of the Compositional Random Forests.
 }
 
 \usage{
-cv.comprf(y, x, ntrees = c(50, 100, 200), nfeatures, minleaf,
+cv.comprf(y, x, ntrees = c(50, 100, 500, 1000), nfeatures, minleaf,
 folds = NULL, nfolds = 10, seed = NULL, ncores = 1)
 }
 

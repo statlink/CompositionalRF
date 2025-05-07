@@ -1,15 +1,15 @@
-#useDynLib(Compositional, .registration = TRUE)
+useDynLib(CompositionalRF, .registration=TRUE)
+importFrom(Rcpp, evalCpp)
+importFrom(RcppParallel,RcppParallelLibs)
 
 importFrom("Compositional", alr, makefolds)
 importFrom("Rfast", colmeans)
 importFrom("stats", predict, ppr)
-importFrom("MultivariateRandomForest", build_forest_predict)
 
 import("doParallel")
 import("parallel")
 import("foreach")
 
-exportPattern("^[[:alpha:]]+")
-exportPattern("^[^\\.]")
-export(.onAttach)
+export("comp.rf")
+export("cv.comprf")
 
