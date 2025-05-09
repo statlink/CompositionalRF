@@ -11,7 +11,9 @@
     "relative_order": 2,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "77,0",
+        "scrollLine": "62"
     },
     "folds": "",
     "lastKnownWriteTime": 1746629260,
