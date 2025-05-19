@@ -1,0 +1,84 @@
+\name{alfa.comp.rf}
+\alias{alfa.comp.rf}
+\title{
+Compositional Random Forests
+}
+
+\description{
+Compositional Random Forests.
+}
+
+\usage{
+alfa.comp.rf(xnew = x, y, x, a = seq(-1, 1, by = 0.1), ntrees, nfeatures, minleaf)
+}
+
+\arguments{
+\item{xnew}{
+A matrix with the new predictor variables whose compositional response values are to be predicted.
+}
+\item{y}{
+The response compositional data. Zero values are not allowed.
+}
+\item{x}{
+A matrix with the predictor variables data.
+}
+\item{a}{
+A vector of \eqn{\alpha} values.
+}
+\item{ntrees}{
+The number of trees to construct in the random forest.
+}
+\item{nfeatures}{
+The number of randomly selected predictor variables considered for a split in each regression tree node,
+which must be less than the number of input precictors.
+}
+\item{minleaf}{
+Minimum number of observations in the leaf node. If a node has less than or equal to minleaf observations,
+there will be no splitting in that node and this node will be considered as a leaf node.
+The number evidently must be less than or equal to the sample size.
+}
+}
+
+\details{
+The compositional are first log-transformed using the additive log-ratio transformation and then the multivariate random forest algorithm of Rahman, Otridge and Pal (2017) is applied.
+}
+
+\value{
+A matrix with the estimated compositional response values.
+}
+
+\references{
+Rahman R., Otridge J. and Pal R. (2017). IntegratedMRF: random forest-based framework for
+integrating prediction from different data types. Bioinformatics, 33(9): 1407--1410.
+
+Segal M. and Xiao Y. (2011). Multivariate random forests.
+Wiley Interdisciplinary Reviews: Data mining and Knowledge Discovery, 1(1): 80--87.
+
+Tsagris M.T., Preston S. and Wood A.T.A. (2011). A data-based power transformation
+for compositional data. In Proceedings of the 4th Compositional Data Analysis Workshop,
+Girona, Spain. https://arxiv.org/pdf/1106.1451.pdf
+}
+
+\author{
+Michail Tsagris.
+
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
+}
+
+%\note{
+%%  ~~further notes~~
+%}
+
+\seealso{
+\code{\link{cv.comprf}
+}
+}
+
+\examples{
+y <- as.matrix(iris[, 1:4])
+y <- y/ rowSums(y)
+x <- matrix( rnorm(150 * 10), ncol = 10 )
+mod <- alfa.comp.rf(x[1:10, ], y, x, a = 0.5, ntrees = 2, nfeatures = 5, minleaf = 10)
+mod
+}
+

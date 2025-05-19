@@ -1,0 +1,359 @@
+[
+    {
+        "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+        "file_last_write": 1746629260.0,
+        "definitions": [
+            {
+                "usr": "c:mrf.cpp@572@macro@RESTRICT",
+                "kind": 9,
+                "parent_name": "",
+                "name": "RESTRICT",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 23,
+                "column": 9,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@splitt22#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#I#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#I#S1_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "splitt22(Rcpp::NumericMatrix, Rcpp::NumericMatrix, int, Rcpp::NumericVector, Rcpp::NumericMatrix, int, Rcpp::NumericVector)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 28,
+                "column": 6,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@SplitResult",
+                "kind": 3,
+                "parent_name": "",
+                "name": "SplitResult",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 146,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@SplitWorker",
+                "kind": 3,
+                "parent_name": "",
+                "name": "SplitWorker",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 162,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@SplitWorker@F@operator()#k#k#",
+                "kind": 7,
+                "parent_name": "SplitWorker",
+                "name": "operator(std::size_t, std::size_t)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 205,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@SplitWorker@F@join#&1$@S@SplitWorker#",
+                "kind": 7,
+                "parent_name": "SplitWorker",
+                "name": "join(const SplitWorker &)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 367,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@splitt22_parallel#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#I#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#I#S1_#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "splitt22_parallel(Rcpp::NumericMatrix, Rcpp::NumericMatrix, int, Rcpp::NumericVector, Rcpp::NumericMatrix, int, Rcpp::NumericVector, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 376,
+                "column": 6,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@splitt2_fun#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#I#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#I#S1_#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "splitt2_fun(Rcpp::NumericMatrix, Rcpp::NumericMatrix, int, Rcpp::NumericVector, Rcpp::NumericMatrix, int, Rcpp::NumericVector, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 432,
+                "column": 6,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@TreeNode",
+                "kind": 3,
+                "parent_name": "",
+                "name": "TreeNode",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 449,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@split_node_iterative_cpp#&1$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#I#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#I#S0_#I#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "split_node_iterative_cpp(const Rcpp::NumericMatrix &, const Rcpp::NumericMatrix &, int, Rcpp::NumericVector, int, const Rcpp::NumericMatrix &, int, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 457,
+                "column": 6,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@build_single_tree_cpp#&1$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#I#I#S0_#I#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "build_single_tree_cpp(const Rcpp::NumericMatrix &, const Rcpp::NumericMatrix &, int, int, const Rcpp::NumericMatrix &, int, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 582,
+                "column": 6,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@predicting_cpp#$@N@Rcpp@S@Vector>#VI19#@N@Rcpp@ST>1#T@PreserveStorage#I#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "predicting_cpp(Rcpp::List, int, Rcpp::NumericVector, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 603,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@PredictionWorker",
+                "kind": 3,
+                "parent_name": "",
+                "name": "PredictionWorker",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 671,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@PredictionWorker@F@operator()#k#k#",
+                "kind": 7,
+                "parent_name": "PredictionWorker",
+                "name": "operator(std::size_t, std::size_t)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 684,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@Node",
+                "kind": 3,
+                "parent_name": "",
+                "name": "Node",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 743,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@convertModel#&1$@N@Rcpp@S@Vector>#VI19#@N@Rcpp@ST>1#T@PreserveStorage#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "convertModel(const Rcpp::List &)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 761,
+                "column": 19,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@NativePredictionWorker",
+                "kind": 3,
+                "parent_name": "",
+                "name": "NativePredictionWorker",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 811,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@NativePredictionWorker@F@operator()#k#k#",
+                "kind": 7,
+                "parent_name": "NativePredictionWorker",
+                "name": "operator(std::size_t, std::size_t)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 824,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@predicting_parallel_native_cpp#$@N@Rcpp@S@Vector>#VI19#@N@Rcpp@ST>1#T@PreserveStorage#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#I#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "predicting_parallel_native_cpp(Rcpp::List, Rcpp::NumericMatrix, int, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 871,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@single_tree_prediction_cpp#$@N@Rcpp@S@Vector>#VI19#@N@Rcpp@ST>1#T@PreserveStorage#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "single_tree_prediction_cpp(Rcpp::List, Rcpp::NumericMatrix, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 922,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@myCovariance#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "myCovariance(Rcpp::NumericMatrix)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 957,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@cholDecomp#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "cholDecomp(Rcpp::NumericMatrix)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 999,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@invLowerTri#&1$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "invLowerTri(const Rcpp::NumericMatrix &)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1033,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@transposeMat#&1$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "transposeMat(const Rcpp::NumericMatrix &)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1061,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@matMultiply#&1$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "matMultiply(const Rcpp::NumericMatrix &, const Rcpp::NumericMatrix &)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1078,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@myInvSympd#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "myInvSympd(Rcpp::NumericMatrix)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1111,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@CovWorker",
+                "kind": 3,
+                "parent_name": "",
+                "name": "CovWorker",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1135,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@CovWorker@F@operator()#k#k#",
+                "kind": 7,
+                "parent_name": "CovWorker",
+                "name": "operator(std::size_t, std::size_t)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1148,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@myCovarianceParallel#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "myCovarianceParallel(Rcpp::NumericMatrix, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1168,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@MatMulWorker",
+                "kind": 3,
+                "parent_name": "",
+                "name": "MatMulWorker",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1219,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@MatMulWorker@F@operator()#k#k#",
+                "kind": 7,
+                "parent_name": "MatMulWorker",
+                "name": "operator(std::size_t, std::size_t)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1229,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@myInvSympdParallel#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "myInvSympdParallel(Rcpp::NumericMatrix, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1246,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@cov_fun#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "cov_fun(Rcpp::NumericMatrix, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1264,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@InvSympd_fun#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "InvSympd_fun(Rcpp::NumericMatrix, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1277,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@build_forest_predict_cpp#$@N@Rcpp@S@Matrix>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#S0_#I#I#I#S0_#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "build_forest_predict_cpp(Rcpp::NumericMatrix, Rcpp::NumericMatrix, int, int, int, Rcpp::NumericMatrix, int)",
+                "file": "C:/Users/mtsag/Documents/GitHub/CompositionalRF/CompositionalRF/src/mrf.cpp",
+                "line": 1291,
+                "column": 15,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    }
+]

@@ -1,0 +1,86 @@
+cv.alfacomprf <- function(y, x, a = seq(-1, 1, by = 0.1), ntrees = c(50, 100, 200), nfeatures,
+                          minleaf, folds = NULL, nfolds = 10, seed = NULL, ncores = 1) {
+
+  if ( min(y) == 0 )  a <- a[a > 0]
+  n <- dim(y)[1]
+
+  if (ncores > 1) {
+    cl <- parallel::makePSOCKcluster(ncores)
+    doParallel::registerDoParallel(cl)
+    if ( is.null(folds) )
+      folds <- Compositional::makefolds(1:n, nfolds = nfolds, stratified = FALSE, seed = seed )
+    nfolds <- length(folds)
+    p <- dim(config)[1]
+    kl <- js <- matrix(nrow = nfolds, ncol = p)
+
+    per <- foreach( k = 1:nfolds, .combine = rbind, .export = "alfa.comp.rf",
+      .packages = c("MultivariateRandomForest") ) %dopar% {
+       ytrain <- ly[ -folds[[ k ]], ]
+       ytest <- y[ folds[[ k ]],  ]
+       xtrain <- x[-folds[[ k ]], ]
+       xtest <- x[folds[[ k ]], ]
+       est <- CompositionalRF::alfa.comp.rf(xtest, ytrain, xtrain, a = a,
+                               ntrees = config[j, 1], nfeatures = config[j, 2], minleaf = config[j, 3])
+       for (j in 1:p) {
+         ela <- abs( ytest * log( ytest / est ) )
+         ela[ is.infinite(ela) ] <- NA
+         kl[k, j] <- 2 * mean(ela , na.rm = TRUE)
+         M <- 0.5 * (ytest + est[[ i ]][[ j ]])
+         ela2 <- ytest * log( ytest / M ) + est[[ i ]][[ j ]] * log( est[[ i ]][[ j ]] / M )
+         ela2[ is.infinite(ela2) ] <- NA
+         js[k, j] <- mean(ela2, na.rm = TRUE)
+       }
+       return( cbind(kl, js) )
+    }
+    parallel::stopCluster(cl)
+    kl <- Rfast::colmeans( per[, 1:(0.5 * p)] )
+    js <- Rfast::colmeans( per[, (0.5 * p + 1):p] )
+    kl <- cbind(config, kl )
+    js <- cbind(config, js )
+
+  } else {
+    kla <- jsa <- list()
+    if ( is.null(folds) )
+      folds <- Compositional::makefolds(1:n, nfolds = nfolds, stratified = FALSE, seed = seed)
+    nfolds <- length(folds)
+    p <- dim(config)[1]
+    kl <- js <- matrix(nrow = nfolds, ncol = p)
+
+    for ( k in 1:nfolds ) {
+      ytrain <- y[ -folds[[ k ]], ]
+      ytest <- y[ folds[[ k ]],  ]
+      xtrain <- x[-folds[[ k ]], ]
+      xtest <- x[folds[[ k ]], ]
+      est <- CompositionalRF::alfa.comp.rf(xtest, ytrain, xtrain, a = a,
+                                ntrees = ntrees, nfeatures = nfeatures, minleaf = minleaf)
+      for (i in 1:la) {
+        for (j in 1:p) {
+          ela <- abs( ytest * log( ytest / est[[ i ]][[ j ]] ) )
+          ela[ is.infinite(ela) ] <- NA
+          kl[k, j] <- 2 * mean(ela , na.rm = TRUE)
+          M <- 0.5 * (ytest + est[[ i ]][[ j ]])
+          ela2 <- ytest * log( ytest / M ) + est[[ i ]][[ j ]] * log( est[[ i ]][[ j ]] / M )
+          ela2[ is.infinite(ela2) ] <- NA
+          js[k, j] <- mean(ela2, na.rm = TRUE)
+        }
+        kla[[ i ]] <- kl
+        jsa[[ i ]] <- js
+      }
+    }
+    for (i in 1:la) {
+      kla[[ i ]] <- cbind(config, Rfast::colmeans(kla[[ i ]]) )
+      js[[ i ]] <- cbind(config, Rfast::colmeans(jsa[[ i ]]) )
+    }
+  }
+
+  colnames(kl) <- c( colnames(config), "KL")
+  colnames(js) <- c( colnames(config), "JS")
+  list(kl = kl, js = js)
+}
+
+
+
+
+
+
+

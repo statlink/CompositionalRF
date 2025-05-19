@@ -1,0 +1,26 @@
+{
+    "id": "05CD3425",
+    "path": "~/packages/CompositionalRF/src/mrf.cpp",
+    "project_path": "src/mrf.cpp",
+    "type": "cpp",
+    "hash": "3716296656",
+    "contents": "",
+    "dirty": false,
+    "created": 1746437383851.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "1279,41",
+        "scrollLine": "1311"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1747230678,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1747230678290,
+    "read_only": false,
+    "read_only_alternatives": []
+}

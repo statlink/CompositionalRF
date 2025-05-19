@@ -1,0 +1,92 @@
+// [[Rcpp::export]]
+NumericMatrix mrf(NumericMatrix trainX, NumericMatrix trainY, 
+                                       int n_tree, int m_feature, int min_leaf, 
+                                       NumericMatrix testX, int nCores = 0) {
+  // Parameter checks.
+  int n_train = trainX.nrow();
+  int p_train = trainX.ncol();
+  if(n_tree < 1)
+    stop("Number of trees in the forest must be at least 1");
+  if(m_feature < 1)
+    stop("Number of randomly selected features for a split must be at least 1");
+  if(min_leaf < 1 || min_leaf > n_train)
+    stop("Minimum leaf number must be at least 1 and no larger than the number of training samples");
+  if(p_train != testX.ncol() || n_train != trainY.nrow())
+    stop("Data size is inconsistent");
+  
+  // Determine number of responses & test sample size.
+  int Variable_number = trainY.ncol();
+  int n_test = testX.nrow();
+  
+  // Preallocate output matrix Y_HAT (predictions) and initialize all entries to zero.
+  NumericMatrix Y_HAT(n_test, Variable_number);
+  std::fill(Y_HAT.begin(), Y_HAT.end(), 0.0);
+  
+  // Loop over each tree.
+  for (int tree_index = 0; tree_index < n_tree; tree_index++){
+    // ---------------------------------------------------------------------
+      // Bootstrap Sample Generation using Rcpp's sample() sugar
+    // This generates a sample over 1:n_train (one-based) of size n_train with replacement.
+    IntegerVector idx = sample(n_train, n_train, true);
+    // Convert to std::vector<int> and adjust to zero-based indexing.
+    std::vector<int> indices = as< std::vector<int> >(idx);
+    for (size_t i = 0; i < indices.size(); i++){
+      indices[i] = indices[i] - 1;
+    }
+    // ---------------------------------------------------------------------
+    
+    // Subset the training sets.
+    // X_sub will be an n_train x p_train matrix,
+    // Y_sub will be an n_train x Variable_number matrix.
+    NumericMatrix X_sub(n_train, p_train);
+    NumericMatrix Y_sub(n_train, Variable_number);
+    
+    // Subset trainX.
+    for (int j = 0; j < p_train; j++){
+      for (int i = 0; i < n_train; i++){
+        X_sub(i, j) = trainX(indices[i], j);
+      }
+    }
+    // Subset trainY.
+    for (int j = 0; j < Variable_number; j++){
+      for (int i = 0; i < n_train; i++){
+        Y_sub(i, j) = trainY(indices[i], j);
+      }
+    }
+    
+    // Determine model command: if multivariate responses, use Command 2.
+    int Command = (Variable_number > 1) ? 2 : 1;
+    
+    // Compute the inverse covariance matrix if needed.
+    NumericMatrix InvCovY;
+    if (Command == 2) {
+      // Use your custom myCovariance function to compute the covariance matrix.
+      // NumericMatrix covMat = cov_fun(Y_sub);
+      // Compute its inverse using your myInvSympd function.
+      InvCovY = InvSympd_fun(cov_fun(Y_sub));//InvSympd_fun(covMat);
+    } else {
+      InvCovY = NumericMatrix(2, 2); // Dummy matrix in the univariate case.
+    }
+    
+    // Build a single tree using the bootstrap sample.
+    List Single_Model = build_single_tree_cpp(X_sub, Y_sub, m_feature, min_leaf, 
+                                              InvCovY, Command, nCores);
+    
+    // Get predictions on the test set from this tree.
+    NumericMatrix Y_pred = predicting_parallel_native_cpp(Single_Model, testX, Variable_number, nCores);
+    
+    // Accumulate predictions from this tree.
+    int totElems = Y_HAT.size();
+    for (int i = 0; i < totElems; i++){
+      Y_HAT[i] += Y_pred[i];
+    }
+  }
+  
+  // Average the predictions over all trees.
+  int totElems = Y_HAT.size();
+  for (int i = 0; i < totElems; i++){
+    Y_HAT[i] /= n_tree;
+  }
+  
+  return Y_HAT;
+}

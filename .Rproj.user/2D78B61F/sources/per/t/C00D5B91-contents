@@ -1,0 +1,15 @@
+useDynLib(CompositionalRF, .registration=TRUE)
+importFrom(Rcpp, evalCpp)
+importFrom(RcppParallel,RcppParallelLibs)
+
+importFrom("Compositional", alr, makefolds)
+importFrom("Rfast", colmeans)
+importFrom("stats", predict, ppr)
+
+import("doParallel")
+import("parallel")
+import("foreach")
+
+export("comp.rf")
+export("cv.comprf")
+

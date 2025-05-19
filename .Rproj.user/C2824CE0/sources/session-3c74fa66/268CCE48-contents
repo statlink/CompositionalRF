@@ -1,0 +1,48 @@
+\name{CompositionalRF-package}
+\alias{CompositionalRF-package}
+\docType{package}
+\title{
+Multivariate Random Forests with Compositional Responses
+}
+
+\description{
+Multivariate random forest with compositional response variables and continuous predictor variables.
+The data are first transformed using the additive log-ratio transformation and then the multivariate random forest of Rahman R., Otridge J. and Pal R. (2017), <doi:10.1093/bioinformatics/btw765>, is applied.
+}
+
+\details{
+\tabular{ll}{
+Package: \tab CompositionalRF\cr
+Type: \tab Package\cr
+Version: \tab 1.1 \cr
+Date: \tab 2024-10-03\cr
+License: \tab GPL-2\cr
+}
+}
+
+\author{
+Michail Tsagris \email{mtsagris@uoc.gr}.
+}
+
+\section{Maintainers}{
+Michail Tsagris <mtsagris@uoc.gr>
+}
+
+\references{
+Rahman R., Otridge J. and Pal R. (2017). IntegratedMRF: random forest-based framework for
+integrating prediction from different data types. Bioinformatics, 33(9): 1407--1410.
+
+Segal M. and Xiao Y. (2011). Multivariate random forests.
+Wiley Interdisciplinary Reviews: Data mining and Knowledge Discovery, 1(1): 80--87.
+
+Alenazi A. (2023). A review of compositional data analysis and recent advances.
+Communications in Statistics--Theory and Methods, 52(16): 5535--5567.
+
+Friedman Jerome, Trevor Hastie and Robert Tibshirani (2009).
+The elements of statistical learning, 2nd edition. Springer, Berlin.
+}
+
+%\note{
+%}
+
+

@@ -1,0 +1,26 @@
+{
+    "id": "401C1E90",
+    "path": "~/packages/CompositionalRF/man/mrf.Rd",
+    "project_path": "man/mrf.Rd",
+    "type": "r_doc",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1747228618480.0,
+    "source_on_save": false,
+    "relative_order": 9,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "41,0",
+        "scrollLine": "36"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1747230917,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1747230917824,
+    "read_only": false,
+    "read_only_alternatives": []
+}

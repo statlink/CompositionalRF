@@ -1,0 +1,31 @@
+comp.rf2 <- function(xnew = x, y, x, type = "alr", ntrees, nfeatures, minleaf,
+                    ncores = 0) {
+  
+  if ( type == "alr" )  y <- Compositional::alr(y)
+  est <- MultivariateRandomForest::build_forest_predict(trainX = x,
+                                                       trainY = y,
+    n_tree = ntrees, m_feature = nfeatures, min_leaf = minleaf, testX = xnew)
+  # est <- .build_forest_predict_cpp(trainX = x, trainY = y,
+  #                                  n_tree = ntrees,
+  #                                  m_feature = nfeatures,
+  #                                  min_leaf = minleaf,
+  #                                  testX = xnew,
+  #                                  nCores = ncores)
+  Compositional::alrinv(est)
+}
+
+y <- as.matrix(iris[, 1:4])
+y <- y/ rowSums(y)
+x <- matrix( rnorm(150 * 10), ncol = 10 )
+mod <- comp.rf(x[1:10, ], y, x, ntrees = 2, nfeatures = 5, minleaf = 10)
+mod
+
+
+bench::mark(CompositionalRF::comp.rf(x[1:10, ], y, x, ntrees = 2, nfeatures = 5, minleaf = 10),
+            comp.rf2(x[1:10, ], y, x, ntrees = 2, nfeatures = 5, minleaf = 10),
+            check=FALSE)
+
+set.seed(123)
+x1 <- CompositionalRF::comp.rf(x[1:10, ], y, x, ntrees = 2, nfeatures = 5, minleaf = 10)
+set.seed(123)
+x2 <- comp.rf2(x[1:10, ], y, x, ntrees = 2, nfeatures = 5, minleaf = 10)
