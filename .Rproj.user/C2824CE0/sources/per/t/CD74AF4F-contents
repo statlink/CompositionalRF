@@ -1,5 +1,5 @@
-\name{cv.comprf}
-\alias{cv.comprf}
+\name{cv.alfacomprf}
+\alias{cv.alfacomprf}
 \title{
 Cross-Validation of the Compositional Random Forests
 }
@@ -9,7 +9,7 @@ Cross-Validation of the Compositional Random Forests.
 }
 
 \usage{
-cv.comprf(y, x, ntrees = c(50, 100, 500, 1000), nfeatures, minleaf,
+cv.alfacomprf(y, x, ntrees = c(50, 100, 500, 1000), nfeatures, minleaf,
 folds = NULL, nfolds = 10, seed = NULL, ncores = 1)
 }
 
@@ -41,9 +41,9 @@ The number of folds in the cross validation.
 You can specify your own seed number here or leave it NULL.
 }
 \item{ncores}{
-The number of cores to use. If more than 1, parallel computing will take place.
-It is advisable to use it if you have many observations and or many variables,
-otherwise it will slow down the process.
+The number of cores to use. If greater than 1, parallel computing will take
+place. It is advisable to use it if you have many observations and or many
+variables, otherwise it will slow down the process.
 }
 }
 
@@ -65,11 +65,13 @@ Jensen-Shannon divergence, for each configuration.
 }
 
 \references{
-Rahman R., Otridge J. and Pal R. (2017). IntegratedMRF: random forest-based framework for
-integrating prediction from different data types. Bioinformatics, 33(9): 1407--1410.
+Rahman R., Otridge J. and Pal R. (2017). IntegratedMRF: random forest-based
+framework for integrating prediction from different data types. Bioinformatics,
+33(9): 1407--1410.
 
 Segal M. and Xiao Y. (2011). Multivariate random forests.
-Wiley Interdisciplinary Reviews: Data mining and Knowledge Discovery, 1(1): 80--87.
+Wiley Interdisciplinary Reviews: Data mining and Knowledge Discovery, 1(1):
+80--87.
 }
 
 \author{
