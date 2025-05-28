@@ -1,6 +1,6 @@
 {
     "id": "E8827C50",
-    "path": "~/GitHub/CompositionalRF/CompositionalRF/R/alfa.comp.rf.R",
+    "path": "~/GitHub/CompositionalRF/R/alfa.comp.rf.R",
     "project_path": "R/alfa.comp.rf.R",
     "type": "r_source",
     "hash": "0",
@@ -12,7 +12,7 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "11,19",
+        "cursorPosition": "6,17",
         "scrollLine": "0"
     },
     "folds": "",
