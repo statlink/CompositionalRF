@@ -1,26 +1,26 @@
 {
-    "id": "80BA0062",
-    "path": "~/GitHub/CompositionalRF/R/mrf.R",
-    "project_path": "R/mrf.R",
-    "type": "r_source",
+    "id": "D187BCB4",
+    "path": "~/GitHub/CompositionalRF/man/mrf.Rd",
+    "project_path": "man/mrf.Rd",
+    "type": "r_doc",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1748526272001.0,
+    "created": 1748526363168.0,
     "source_on_save": false,
     "relative_order": 3,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "11,0",
-        "scrollLine": "0"
+        "cursorPosition": "29,31",
+        "scrollLine": "13"
     },
     "folds": "",
-    "lastKnownWriteTime": 1748452142,
+    "lastKnownWriteTime": 1748452496,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1748452142,
+    "last_content_update": 1748452496,
     "read_only": false,
     "read_only_alternatives": []
 }
