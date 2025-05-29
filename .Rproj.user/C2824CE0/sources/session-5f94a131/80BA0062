@@ -1,14 +1,14 @@
 {
-    "id": "FC470A2A",
+    "id": "80BA0062",
     "path": "~/GitHub/CompositionalRF/R/mrf.R",
     "project_path": "R/mrf.R",
     "type": "r_source",
-    "hash": "556514285",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1748453975590.0,
+    "created": 1748526272001.0,
     "source_on_save": false,
-    "relative_order": 5,
+    "relative_order": 3,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
@@ -21,6 +21,6 @@
     "collab_server": "",
     "source_window": "",
     "last_content_update": 1748452142,
-    "read_only": true,
+    "read_only": false,
     "read_only_alternatives": []
 }

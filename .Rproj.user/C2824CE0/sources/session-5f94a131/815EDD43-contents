@@ -1,8 +1,8 @@
 useDynLib(CompositionalRF, .registration=TRUE)
 importFrom(Rcpp, evalCpp)
-importFrom(RcppParallel,RcppParallelLibs)
+importFrom(RcppParallel, RcppParallelLibs)
 
-importFrom("Compositional", alr, makefolds)
+importFrom("Compositional", makefolds, alfa)
 importFrom("Rfast", colmeans)
 importFrom("stats", predict, ppr)
 
