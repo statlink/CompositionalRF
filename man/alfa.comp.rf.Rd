@@ -59,7 +59,7 @@ Rahman R., Otridge J. and Pal R. (2017). IntegratedMRF: random forest-based fram
 integrating prediction from different data types. Bioinformatics, 33(9): 1407--1410.
 
 Segal M. and Xiao Y. (2011). Multivariate random forests.
-Wiley Interdisciplinary Reviews: Data mining and Knowledge Discovery, 1(1): 80--87.
+Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 1(1): 80--87.
 
 Tsagris M.T., Preston S. and Wood A.T.A. (2011). A data-based power transformation
 for compositional data. In Proceedings of the 4th Compositional Data Analysis Workshop,

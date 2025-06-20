@@ -2,7 +2,7 @@ Package: CompositionalRF
 Type: Package
 Title: Multivariate Random Forest with Compositional Responses
 Version: 1.3
-Date: 2025-06-12
+Date: 2025-06-20
 Authors@R: c( person("Michail", "Tsagris", role = c("aut", "cre"), email = "mtsagris@uoc.gr"),
              person("Christos", "Adam", role = c("aut"), email = "pada4m4@gmail.com") )
 Maintainer: Michail Tsagris <mtsagris@uoc.gr>
@@ -10,7 +10,7 @@ Depends: R (>= 4.0)
 Imports: Compositional, doParallel, foreach, RcppParallel, Rcpp, Rfast, stats
 LinkingTo: Rcpp, RcppParallel
 Suggests: Rfast2
-Description: Non linear regression with compositional responses and Euclidean predictors is performed. The compositional data are first transformed using the additive log-ratio transformation, and then the multivariate random forest of Rahman R., Otridge J. and Pal R. (2017), <doi:10.1093/bioinformatics/btw765>, is applied. 
+Description: Multivariate random forests with compositional responses and Euclidean predictors is performed. The compositional data are first transformed using the additive log-ratio transformation, and then the multivariate random forest of Rahman R., Otridge J. and Pal R. (2017), <doi:10.1093/bioinformatics/btw765>, is applied. 
 License: GPL (>= 2)
 SystemRequirements: GNU make
 Repository: CRAN

@@ -66,7 +66,7 @@ framework for integrating prediction from different data types. Bioinformatics,
 33(9): 1407--1410.
 
 Segal M. and Xiao Y. (2011). Multivariate random forests.
-Wiley Interdisciplinary Reviews: Data mining and Knowledge Discovery, 1(1):
+Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 1(1):
 80--87.
 }
 
