@@ -15,7 +15,7 @@ The data are first transformed using the additive log-ratio transformation and t
 Package: \tab CompositionalRF\cr
 Type: \tab Package\cr
 Version: \tab 1.3 \cr
-Date: \tab 2025-06-12\cr
+Date: \tab 2025-06-20\cr
 License: \tab GPL-2\cr
 }
 }
@@ -33,7 +33,7 @@ Rahman R., Otridge J. and Pal R. (2017). IntegratedMRF: random forest-based fram
 integrating prediction from different data types. Bioinformatics, 33(9): 1407--1410.
 
 Segal M. and Xiao Y. (2011). Multivariate random forests.
-Wiley Interdisciplinary Reviews: Data mining and Knowledge Discovery, 1(1): 80--87.
+Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 1(1): 80--87.
 
 Alenazi A. (2023). A review of compositional data analysis and recent advances.
 Communications in Statistics--Theory and Methods, 52(16): 5535--5567.
